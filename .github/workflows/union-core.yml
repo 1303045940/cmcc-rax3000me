@@ -96,7 +96,7 @@ on:
         required: true
         type: string
 env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
   CORE_TARGET: ${{inputs.CORE_TARGET}}
   CORE_THEME: ${{inputs.CORE_THEME}}
   CORE_NAME: ${{inputs.CORE_NAME}}
@@ -471,7 +471,7 @@ jobs:
           KERNEL_VERSION_NAME: ${{ env.CORE_LINUX }}
           KERNEL_AUTO_LATEST: true
           GZIP_IMGS: .gz
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           
       - name: 合并原始资料和打包文件
         if: env.CORE_Pack == 'ophub'  ||  env.CORE_Pack == 'flippy'
