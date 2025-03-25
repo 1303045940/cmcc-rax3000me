@@ -484,7 +484,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           tag: ${{env.show_tag_name}}
           body: |
             ====================🧊固件信息🧊=======================
